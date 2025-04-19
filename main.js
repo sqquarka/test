@@ -30,14 +30,14 @@ scene.add(ambient);
 
 // Tekstura trawy
 const textureLoader = new THREE.TextureLoader();
-const grassTexture = textureLoader.load('textures/grass.jpg');
+const grassTexture = textureLoader.load('test/textures/grass.jpg');
 
 // Napisy 3D: A N O N I (bez T)
 const fontLoader = new FontLoader();
-fontLoader.load('fonts/helvetiker_regular.typeface.json', (font) => {
+fontLoader.load('test/fonts/helvetiker_regular.typeface.json', (font) => {
   const material = new THREE.MeshStandardMaterial({ map: grassTexture });
   const spacing = 1.5;
-  const text = 'A NONI'; // bez T
+  const text = 'AN ONI'; // bez T
 
   for (let i = 0; i < text.length; i++) {
     const geo = new TextGeometry(text[i], {
@@ -51,7 +51,7 @@ fontLoader.load('fonts/helvetiker_regular.typeface.json', (font) => {
   }
 
   // Muchomor jako litera „T” (tymczasowo obraz 2D w 3D)
-  const mushroomTexture = textureLoader.load('models/mushroom_T_placeholder.png');
+  const mushroomTexture = textureLoader.load('test/models/mushroom_T_placeholder.png');
   const mushroomGeo = new THREE.PlaneGeometry(1.2, 1.5);
   const mushroomMat = new THREE.MeshBasicMaterial({ map: mushroomTexture, transparent: true });
   const mushroomMesh = new THREE.Mesh(mushroomGeo, mushroomMat);
