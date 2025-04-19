@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+  background-color: #CCC476;
+  font-family: 'Segoe UI', sans-serif;
+  color: #19292D;
+}
+
+canvas {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+}
+
+header {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+}
+
+.flags button {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #19292D;
+  color: white;
+}
